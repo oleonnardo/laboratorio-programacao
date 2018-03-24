@@ -22,8 +22,14 @@ public class MeuSistemaSimplesDeTributacao {
                   int op;
                   Scanner read = new Scanner(System.in);
                   ArrayList <Object> contribuintes = new ArrayList();
-                                    
-                  contribuintes = Faker.factory(10, contribuintes);
+                  
+                  /**
+                   * @see Faker Generator
+                   * @ descomentar essa linha para gerar dados falsos
+                   * @param max: quantidade de dados
+                   * @param array: Arraylist contribuintes
+                   */
+                   //contribuintes = Faker.factory(10, contribuintes);
                   
                   do{
                    
