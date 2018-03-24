@@ -143,10 +143,15 @@ public class Controller {
           */
          protected static Professor createdProfessor(int codigo, String nome, double salario,  double vcasa_propria, double vcarro, int profissao){
                   Scanner read = new Scanner(System.in);
+                  int num_salarios;
                   System.out.println("\nProfissão: " + Model.profissoes[profissao]);
-                  System.out.println("Quantidade de salários do professor: ");
-                  System.out.print(">> ");
-                  int num_salarios = read.nextInt();
+                  do{
+                           System.out.println("Quantidade de salários do professor: ");
+                           System.out.print(">> ");
+                           num_salarios = read.nextInt();  
+                           if( num_salarios==0 )
+                                    System.out.println("Valor inválido.\nSe você recebe somente um salário informe: 1.\n");
+                  }while(num_salarios<1);
 
                   System.out.println("Despesas com material didático (R$):");
                   System.out.print(">> ");
